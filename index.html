@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Head -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Script -->
+    <script src="/node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+    <!-- Style -->
+    <link
+      rel="stylesheet"
+      href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/index.css" />
+
+    <title>Tasfri | Online</title>
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-3">
+      <div class="container-fluid mx-5">
+        <a href="#" class="navbar-brand">
+          <img
+            src="assets/logo White.png"
+            alt="Kominfo"
+            width="30"
+            height="30" />
+        </a>
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a href="#" class="nav-link"> Interactive Map </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link active"> Tasfri </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"> FAQ </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Container Filter -->
+    <div class="container-fluid">
+      <!-- Row 1 -->
+      <div class="row align-items-center my-3 mx-3">
+        <!-- Filter Rentan Frekuensi -->
+        <div class="col-6">
+          <div class="row align-items-center">
+            <label class="form-label" for="alokasiForm">Rentan Frekuensi</label>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="alokasiForm">Form</span>
+              <input
+                type="number"
+                class="input-custom"
+                placeholder="Frekuensi Awal" />
+              <span class="input-group-text">To</span>
+              <input
+                type="number"
+                class="input-custom"
+                placeholder="Frekuensi Akhir" />
+              <select class="form-select-sm custom-dropdown">
+                <option selected>Pilih Satuan</option>
+                <option value="GHz">GHz</option>
+                <option value="MHz">MHz</option>
+                <option value="kHz">kHz</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!-- Filter Alokasi -->
+        <div class="col-6">
+          <label for="" class="form-label">Alokasi</label>
+          <div class="dropdown-center d-grid mb-3">
+            <button
+              class="btn btn-light dropdown-toggle border-secondary-subtle"
+              type="button"
+              id="btnAlokasi"
+              data-bs-toggle="dropdown"
+              data-bs-auto-close="outside">
+              Click to Select
+            </button>
+            <ul
+              class="dropdown-menu checkbox-menu allow-focus"
+              aria-labelledby="btnAlokasi">
+              <li>
+                <label
+                  ><input type="checkbox" value="All" id="checkAll" /> All
+                </label>
+              </li>
+              <li>
+                <label><input type="checkbox" value="Item 1" /> Item 1 </label>
+              </li>
+              <li>
+                <label><input type="checkbox" value="Item 2" /> Item 2 </label>
+              </li>
+              <li>
+                <label> <input type="checkbox" value="Item 3" /> Item 3 </label>
+              </li>
+              <li>
+                <label> <input type="checkbox" value="Item 4" /> Item 4 </label>
+              </li>
+              <li>
+                <label> <input type="checkbox" value="Item 5" /> Item 5 </label>
+              </li>
+              <li>
+                <label> <input type="checkbox" value="Item 6" /> Item 6 </label>
+              </li>
+              <li>
+                <label> <input type="checkbox" value="Item 7" /> Item 7 </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Row 2 -->
+      <div class="row align-items-center my-3 mx-3">
+        <!-- Filter Primary/Secondary -->
+        <div class="col-6">
+          <label class="form-label" for="">Primary/Secondary</label>
+          <div class="row">
+            <div class="btn-group">
+              <div class="col d-grid px-1">
+                <button
+                  type="button"
+                  class="btn btn-light border-black border-opacity-25"
+                  id="btnAll"
+                  data-bs-toggle="button"
+                  aria-pressed="false"
+                  autocomplete="off">
+                  All
+                </button>
+              </div>
+              <div class="col d-grid px-1">
+                <button
+                  type="button"
+                  class="btn btn-light border-black border-opacity-25"
+                  id="btnPrimary"
+                  data-bs-toggle="button"
+                  aria-pressed="false"
+                  autocomplete="off">
+                  Primary
+                </button>
+              </div>
+              <div class="col d-grid px-1">
+                <button
+                  type="button"
+                  class="btn btn-light border-black border-opacity-25"
+                  id="btnSecondary"
+                  data-bs-toggle="button"
+                  aria-pressed="false"
+                  autocomplete="off">
+                  Secondary
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Filter Footnote -->
+        <div class="col-6">
+          <label class="form-label" for="">Footnote</label>
+          <div class="dropdown-center d-grid">
+            <button
+              class="btn btn-light dropdown-toggle border-black border-opacity-25"
+              type="button"
+              id="btnFootnote"
+              data-bs-toggle="dropdown"
+              data-bs-auto-close="true">
+              Click to Select Footnote
+            </button>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item">Footnote 1</li>
+              <li class="dropdown-item">Footnote 2</li>
+              <li class="dropdown-item">Footnote 3</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Container Graph & Footnote -->
+    <div class="container-fluid">
+      <div class="row align-items-center my-3 mx-3">
+        <!-- Kolom Spectrum chart-->
+        <div class="col-6">
+          <div class="spectrum-chart" id="chart"></div>
+        </div>
+        <!-- Kolom Footnonote dan Alokasi Chart  -->
+        <div class="col-6">
+          <div class="row ms-3">
+            <div class="row" id="rowfootnoteText">
+              <div class="col-12">
+                <div class="form-floating">
+                  <textarea
+                    class="col-md-12 mt-3"
+                    id="footnoteText"
+                    rows="6"
+                    readonly></textarea>
+                  <label class="mt-2 ms-2 text-black-50" for="footnoteText"
+                    >Footnote :</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="row" id="rowalokasiChart">
+              <div class="col-12">
+                <div class="alokasi-chart">Col 2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <!-- Script -->
+  <script type="text/javascript" src="checkbox.js"></script>
+  <script type="text/javascript" src="footnote.js"></script>
+  <script type="text/javascript" src="customButton.js"></script>
+  <script src="freqChart.js"></script>
+</html>
