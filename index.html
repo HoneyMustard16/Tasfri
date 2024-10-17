@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <!-- Head -->
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -43,6 +44,7 @@
         </ul>
       </div>
     </nav>
+
     <!-- Container Filter -->
     <div class="container-fluid">
       <!-- Row 1 -->
@@ -180,6 +182,7 @@
         </div>
       </div>
     </div>
+
     <!-- Container Graph & Footnote -->
     <div class="container-fluid">
       <div class="row align-items-center my-3 mx-3">
@@ -194,19 +197,60 @@
               <div class="col-12">
                 <div class="form-floating">
                   <textarea
-                    class="col-md-12 mt-3"
+                    class="form-control"
+                    placeholder="Leave a comment here"
                     id="footnoteText"
-                    rows="6"
+                    style="height: 160px"
                     readonly></textarea>
-                  <label class="mt-2 ms-2 text-black-50" for="footnoteText"
-                    >Footnote :</label
-                  >
+                  <label for="footnoteText">Footnote</label>
                 </div>
               </div>
             </div>
             <div class="row" id="rowalokasiChart">
               <div class="col-12">
-                <div class="alokasi-chart">Col 2</div>
+                <div style="max-height: 160px; overflow: auto">
+                  <table class="table-bordered table-hover custom-table">
+                    <thead>
+                      <tr class="bg-primary">
+                        <th>Frek Start End</th>
+                        <th>Alokasi</th>
+                        <th>Color</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td rowspan="4">10 - 10.4</td>
+                        <td>Bergerak</td>
+                        <td>Red</td>
+                      </tr>
+                      <tr>
+                        <td>Radiolokasi</td>
+                        <td>blue</td>
+                      </tr>
+                      <tr>
+                        <td>Satelit Eksplorasi Bumi</td>
+                        <td>green</td>
+                      </tr>
+                      <tr>
+                        <td>Tetap</td>
+                        <td>yellow</td>
+                      </tr>
+                      <tr>
+                        <td rowspan="3">10.4 - 10.45</td>
+                        <td>Bergerak</td>
+                        <td>Red</td>
+                      </tr>
+                      <tr>
+                        <td>Radiolokasi</td>
+                        <td>blue</td>
+                      </tr>
+                      <tr>
+                        <td>Tetap</td>
+                        <td>yellow</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>
@@ -220,4 +264,5 @@
   <script type="text/javascript" src="footnote.js"></script>
   <script type="text/javascript" src="customButton.js"></script>
   <script src="freqChart.js"></script>
+  <script src="tabelalokasi.js"></script>
 </html>
